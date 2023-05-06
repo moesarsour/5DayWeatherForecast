@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./5DayWeather.css" />
+    <title>5 Day forecast</title>
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+    <!-- main section -->
+    <main>
+      <!-- container for entire main -->
+      <div class="row">
+        <!-- container for search and search history -->
+        <div id="search-and-history" class="col-12 col-lg-3">
+          <div id="form-container" class="">
+            <!-- search form -->
+            <h2 class="mt-1">Search for a City:</h2>
+            <form action="submit">
+              <input
+                type="text"
+                placeholder="Enter City Name"
+                id="city-input"
+                class="form-control-lg"
+              />
+              <button type="submit" id="search-button" class="btn btn-primary">
+                Search
+              </button>
+            </form>
+            <!-- container for dynamic search history -->
+            <div id="search-history" class="d-none d-lg-block"></div>
+          </div>
+        </div>
+        <!-- container for the currently searched city's forecast -->
+        <div class="col-12 col-lg-9 mt-2">
+          <div id="weather-container">
+            <!-- container for the current weather -->
+            <div id="current-weather" class="row">
+              <!-- blank form for new visitors -->
+              <h2 class="col-12">
+                City: --
+                <img src="https://openweathermap.org/img/wn/01d@2x.png" />
+              </h2>
+              <p class="col-12">Temp: --</p>
+              <p class="col-12">Wind: --</p>
+              <p class="col-12">Humidity: --</p>
+              <p class="col-12">
+                UV Index: <span class="uvi badge bg-success">--</span>
+              </p>
+            </div>
+            <!-- header and container for the 5-day forecast -->
+            <h3>5-Day Forcast:</h3>
+            <div
+              class="row justify-content-between"
+              id="forecast-container"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+  <script src="./5DayWeather.js"></script>
+</html>
